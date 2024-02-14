@@ -27,16 +27,20 @@ if check_java; then
     mkdir mods && cd ./mods
 
     #Carpetというmod(便利機能の詰め合わせ)のダウンロード
-    wget -o carpet.jar https://github.com/gnembon/fabric-carpet/releases/download/1.4.112/fabric-carpet-1.20-1.4.112+v230608.jar
+    wget https://github.com/gnembon/fabric-carpet/releases/download/1.4.112/fabric-carpet-1.20-1.4.112+v230608.jar
+    mv ./*carpet*.jar ./carpet.jar
 
     #FabricAPIという前提modをダウンロード
     wget -o fabric-api,jar https://cdn.modrinth.com/data/P7dR8mSH/versions/YG53rBmj/fabric-api-0.92.0%2B1.20.1.jar
+    mv ./*api*.jar ./fabricapi.jar
 
     #SyncMaticaという、LiteMaticaという名前の設計図を表示するmodの設計図を共有できる機能を使えるようにするmod
     wget -o syncmatica.jar https://cdn.modrinth.com/data/bfneejKo/versions/JxB3gBzc/syncmatica-1.20.1-0.3.11.jar
+    mv ./*sync*.jar ./syncmatica.jar
 
     #MemoryLeakFixというメモリーのバグなどをなおすmod
     wget -o memory-leakfix.jar https://cdn.modrinth.com/data/NRjRiSSD/versions/5xvCCRjJ/memoryleakfix-fabric-1.17%2B-1.1.5.jar
+    mv ./*memory*.jar ./memoryleakfix.jar
 
     echo "bash ./start.shでサーバーを起動できます。ワールドデータを移したいときは ~/minecraft-server/fabric-1.20.1 に移動させてください。"
 else
