@@ -21,6 +21,8 @@ if check_java; then
 
     #start.shを作成
     echo java -Xms20G -Xmx25G -jar server.jar nogui >> start.sh
+
+    echo "bash ./start.shでサーバーを起動できます。ワールドデータを移したいときは ~/minecraft-server/fabric-1.20.1 に移動させてください。"
 else
     echo "Javaがインストールされていません。インストールしてください。"
 fi
