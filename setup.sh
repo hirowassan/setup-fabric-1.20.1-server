@@ -1,16 +1,29 @@
-#フォルダを作成
-cd ~
-mkdir minecraft-server && cd minecraft-server
-mkdir fabric-1.20.1 &&cd fabric-1.20.1
+#!/bin/bash
 
-#サーバーをダウンロード
-wget -o server.jar https://meta.fabricmc.net/v2/versions/loader/1.20.4/0.15.6/1.0.0/server/jar
+# Javaのインストールをチェックする関数
+check_java() {
+    java -version >/dev/null 2>&1
+    return $?
+}
 
-#eulaを記述
-echo "eula=true" >> eula.txt
+# Javaがインストールされているかどうかをチェック
+if check_java; then
+    #フォルダを作成
+    cd ~
+    mkdir minecraft-server && cd minecraft-server
+    mkdir fabric-1.20.1 &&cd fabric-1.20.1
 
-#start.shを作成
-echo java -Xms20G -Xmx25G -jar server.jar nogui >> start.sh
+    #サーバーをダウンロード
+    wget -o server.jar https://meta.fabricmc.net/v2/versions/loader/1.20.4/0.15.6/1.0.0/server/jar
 
-#サーバーを起動
-bash ./start.sh
+    #eulaを記述
+    echo "eula=true" >> eula.txt
+
+    #start.shを作成
+    echo java -Xms20G -Xmx25G -jar server.jar nogui >> start.sh
+
+    #サーバーを起動
+    bash ./start.sh
+else
+    echo "Javaがインストールされていません。インストールしてください。"
+fi
