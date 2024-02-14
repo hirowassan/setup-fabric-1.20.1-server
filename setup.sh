@@ -21,9 +21,6 @@ if check_java; then
 
     #start.shを作成
     echo java -Xms20G -Xmx25G -jar server.jar nogui >> start.sh
-
-    #サーバーを起動
-    bash ./start.sh
 else
     echo "Javaがインストールされていません。インストールしてください。"
 fi
