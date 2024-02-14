@@ -27,7 +27,7 @@ if check_java; then
     mkdir mods && cd ./mods
 
     #Carpetというmod(便利機能の詰め合わせ)のダウンロード
-    curl -OJ https://github.com/gnembon/fabric-carpet/releases/download/1.4.112/fabric-carpet-1.20-1.4.112+v230608.jar
+    curl -OJ https://cdn.modrinth.com/data/TQTTVgYE/versions/K0Wj117C/fabric-carpet-1.20-1.4.112%2Bv230608.jar
 
     #FabricAPIという前提modをダウンロード
     curl -OJ https://cdn.modrinth.com/data/P7dR8mSH/versions/YG53rBmj/fabric-api-0.92.0%2B1.20.1.jar
