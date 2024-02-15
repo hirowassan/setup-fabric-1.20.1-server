@@ -41,6 +41,9 @@ if check_java; then
     #MemoryLeakFixというメモリーのバグなどをなおすmod
     curl -OJ https://cdn.modrinth.com/data/NRjRiSSD/versions/5xvCCRjJ/memoryleakfix-fabric-1.17%2B-1.1.5.jar
 
+    #バックアップmod
+    curl -JO https://hirowassan.com/mods/textile_backup-3.1.3-1.20.jar
+
     echo "bash ./start.shでサーバーを起動できます。ワールドデータを移したいときは ~/minecraft-server/fabric-1.20.1 に移動させてください。"
 else
     echo "Javaがインストールされていません。インストールしてください。"
