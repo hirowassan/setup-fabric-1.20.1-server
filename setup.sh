@@ -32,6 +32,9 @@ if check_java; then
     #FabricAPIという前提modをダウンロード
     curl -OJ https://cdn.modrinth.com/data/P7dR8mSH/versions/YG53rBmj/fabric-api-0.92.0%2B1.20.1.jar
 
+    #これも前提mod
+    curl -OJ https://cdn.modrinth.com/data/9s6osm5g/versions/J3FLptsi/cloth-config-11.1.118-fabric.jar
+
     #SyncMaticaという、LiteMaticaという名前の設計図を表示するmodの設計図を共有できる機能を使えるようにするmod
     curl -OJ https://cdn.modrinth.com/data/bfneejKo/versions/JxB3gBzc/syncmatica-1.20.1-0.3.11.jar
 
